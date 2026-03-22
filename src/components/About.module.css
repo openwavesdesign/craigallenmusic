@@ -1,0 +1,12 @@
+.section {
+  padding: 4rem 0;
+  border-top: 1px solid rgba(184, 154, 90, 0.12);
+}
+
+.text {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  max-width: 54ch;
+  line-height: 1.75;
+}
