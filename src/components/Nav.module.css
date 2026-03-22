@@ -1,0 +1,35 @@
+.nav {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(184, 154, 90, 0.15);
+}
+
+.nav .container--wide,
+.nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.ytLink {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.ytLink:hover {
+  color: var(--off-white);
+  border-color: var(--gold-dim);
+}

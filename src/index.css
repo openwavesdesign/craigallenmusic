@@ -1,0 +1,68 @@
+/* ── Reset & base ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:       #1a1612;
+  --ink-soft:  #2e2620;
+  --paper-mid: #d9cebc;
+  --gold:      #b89a5a;
+  --gold-dim:  #8a7240;
+  --off-white: #ede7d4;
+  --muted:     #7a6e5f;
+  --body-font: 'Source Serif 4', Georgia, serif;
+  --display:   'Playfair Display', Georgia, serif;
+  --mono:      'IBM Plex Mono', 'Courier New', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--ink);
+  color: var(--off-white);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+/* ── Shared utilities ─────────────────────────────────────────── */
+.container {
+  width: min(680px, 92%);
+  margin-inline: auto;
+}
+
+.container--wide {
+  width: min(860px, 92%);
+  margin-inline: auto;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  padding: 0.85em 2em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--off-white); }

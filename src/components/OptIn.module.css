@@ -1,0 +1,104 @@
+.section {
+  padding: 4.5rem 0;
+  background: var(--ink-soft);
+  border-top: 1px solid rgba(184, 154, 90, 0.12);
+  border-bottom: 1px solid rgba(184, 154, 90, 0.12);
+  /* Subtle noise texture */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+.headline {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--off-white);
+  margin-bottom: 0.9rem;
+}
+
+.sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  margin-bottom: 2rem;
+  max-width: 52ch;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.form input[type='email'] {
+  flex: 1 1 220px;
+  padding: 0.8em 1em;
+  background: var(--ink);
+  border: 1px solid var(--gold-dim);
+  color: var(--off-white);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form input[type='email']::placeholder { color: var(--muted); }
+.form input[type='email']:focus { border-color: var(--gold); }
+
+.form button[type='submit'] {
+  flex: 0 0 auto;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  border: none;
+  padding: 0.8em 1.6em;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.form button[type='submit']:hover:not(:disabled) { background: var(--off-white); }
+.form button[type='submit']:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.fine {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.success {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  padding: 1.25rem 0;
+}
+
+.errorMsg {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.retryBtn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+@media (max-width: 520px) {
+  .form { flex-direction: column; }
+  .form button[type='submit'] { width: 100%; text-align: center; padding: 1em; }
+}
