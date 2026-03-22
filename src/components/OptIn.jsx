@@ -47,7 +47,7 @@ export default function OptIn() {
 
         {status === 'success' ? (
           <p className={styles.success} role="status">
-            You&rsquo;re in &mdash; check your inbox for the guide.
+            Check your inbox and click the confirmation link to complete your subscription &mdash; the guide will be on its way once confirmed.
           </p>
         ) : (
           <form onSubmit={handleSubmit} className={styles.form} noValidate>
