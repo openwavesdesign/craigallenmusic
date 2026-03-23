@@ -30,14 +30,19 @@ const FAQS = [
 export default function AboutPage() {
   usePageMeta({
     title: 'About Craig Allen | Guitarist & Music Teacher — Montgomery County, PA',
-    description: 'Meet Craig Allen — guitarist, songwriter, home recording enthusiast, and guitar teacher based in Montgomery County, PA. Learn about his musical background, gear, and studio.',
+    description: 'Meet Craig Allen — guitarist, songwriter, home recording enthusiast, and guitar teacher based in Montgomery County, PA.',
   });
 
   return (
     <>
-      {/* ── Page header ─────────────────────────────────────────── */}
-      <section className={styles.header}>
-        <div className="container">
+      {/* ── Page header with full-width background image ─────────── */}
+      <section className={styles.header} aria-label="Page header">
+        {/* CUSTOMIZE: Replace with real <img> or CSS background-image when photo is ready */}
+        <div className={styles.headerBg} aria-hidden="true">
+          <ImagePlaceholder label="Portrait photo — full-width background" aspectRatio="21/9" />
+        </div>
+        <div className={styles.headerOverlay} aria-hidden="true" />
+        <div className={`container ${styles.headerContent}`}>
           <span className="label">About</span>
           {/* CUSTOMIZE: Your name or tagline */}
           <h1 className={styles.h1}>Craig Allen</h1>
@@ -45,69 +50,46 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Featured image ──────────────────────────────────────── */}
-      <section className={styles.imageSection}>
+      {/* ── My story (two columns) ───────────────────────────────── */}
+      <section className={styles.section}>
         <div className="container--wide">
-          <ImagePlaceholder label="Portrait photo" aspectRatio="3/2" />
-        </div>
-      </section>
-
-      {/* ── Bio ─────────────────────────────────────────────────── */}
-      <section className={styles.section}>
-        <div className="container">
           <span className="label">My story</span>
-          {/* CUSTOMIZE: Replace with your full bio */}
-          <div className={styles.prose}>
-            <p>
-              I picked up my first guitar at [age] and never really put it down.
-              What started as learning songs off the radio turned into a lifelong
-              obsession with tone, songwriting, and the art of capturing music on tape
-              &mdash; or, these days, hard drive.
-            </p>
-            <p>
-              Over the years I&rsquo;ve played in [bands/projects], written [number] of
-              original songs, and spent more hours than I care to count chasing the right
-              sound in my basement studio. Every record I&rsquo;ve worked on has taught
-              me something new, and I genuinely believe you never stop learning on this
-              instrument.
-            </p>
-            <p>
-              I started sharing my process on YouTube because I wished someone had shown
-              me this stuff earlier. If you&rsquo;re a beginner trying to figure out
-              where to start, or a hobbyist home recorder trying to get your mixes to
-              translate &mdash; this is the place.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Second image ────────────────────────────────────────── */}
-      <section className={styles.imageSection}>
-        <div className="container">
-          <ImagePlaceholder label="Live or studio photo" aspectRatio="4/3" />
-        </div>
-      </section>
-
-      {/* ── Musical background ──────────────────────────────────── */}
-      <section className={styles.section}>
-        <div className="container">
-          <span className="label">Musical background</span>
-          <div className={styles.prose}>
-            {/* CUSTOMIZE: Genres, influences, instruments */}
-            <p>
-              My roots are in [genres &mdash; e.g., blues, classic rock, folk], but I
-              pull from all over. My biggest influences include [Artist 1], [Artist 2],
-              and [Artist 3]. Beyond guitar I also play [other instruments if any], which
-              informs how I think about arrangements and production.
-            </p>
+          <h2 className={styles.h2}>The long version</h2>
+          <div className={styles.storyGrid}>
+            {/* CUSTOMIZE: Replace with your full bio */}
+            <div className={styles.prose}>
+              <p>
+                I picked up my first guitar at [age] and never really put it down.
+                What started as learning songs off the radio turned into a lifelong
+                obsession with tone, songwriting, and the art of capturing music on tape
+                &mdash; or, these days, hard drive.
+              </p>
+              <p>
+                Over the years I&rsquo;ve played in [bands/projects], written [number] of
+                original songs, and spent more hours than I care to count chasing the right
+                sound in my basement studio. Every record I&rsquo;ve worked on has taught
+                me something new, and I genuinely believe you never stop learning on this
+                instrument.
+              </p>
+              <p>
+                I started sharing my process on YouTube because I wished someone had shown
+                me this stuff earlier. If you&rsquo;re a beginner trying to figure out
+                where to start, or a hobbyist home recorder trying to get your mixes to
+                translate &mdash; this is the place.
+              </p>
+            </div>
+            <div className={styles.storyImage}>
+              <ImagePlaceholder label="Live or studio photo" aspectRatio="4/3" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Studio & gear ───────────────────────────────────────── */}
       <section className={styles.section}>
-        <div className="container">
+        <div className="container--wide">
           <span className="label">Studio &amp; gear</span>
+          <h2 className={styles.h2}>What I work with</h2>
           <div className={styles.gearGrid}>
             {/* CUSTOMIZE: Replace with your actual gear */}
             <div className={styles.gearGroup}>
@@ -138,11 +120,11 @@ export default function AboutPage() {
       </section>
 
       {/* ── Studio image ────────────────────────────────────────── */}
-      <section className={styles.imageSection}>
+      <div className={styles.studioImageWrap}>
         <div className="container--wide">
           <ImagePlaceholder label="Studio / workspace photo" aspectRatio="16/7" />
         </div>
-      </section>
+      </div>
 
       <FaqSection faqs={FAQS} />
 

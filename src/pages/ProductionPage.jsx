@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: 'Do you work with all genres?',
-    a: 'Mostly yes — I\'m most at home with guitar-driven music (rock, folk, Americana, country, blues, indie), but I\'m comfortable across a wide range of styles. If you\'re unsure, just describe your project and we can figure it out.',
+    a: 'Mostly yes — I\'m most at home with guitar-driven music (rock, folk, Americana, blues, indie), but I\'m comfortable across a wide range of styles. If you\'re unsure, just describe your project and we can figure it out.',
   },
   {
     q: 'How do I send you my files?',

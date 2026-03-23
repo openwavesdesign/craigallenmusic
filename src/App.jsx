@@ -11,9 +11,10 @@ import ContactPage from './pages/ContactPage';
 export default function App() {
   return (
     <>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <ScrollToTop />
       <Nav />
-      <main>
+      <main id="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container--wide ${styles.inner}`}>
-        <nav className={styles.nav}>
+        <nav className={styles.nav} aria-label="Site links">
           <Link to="/" className={styles.navLink}>Home</Link>
           <Link to="/about" className={styles.navLink}>About</Link>
           <Link to="/lessons" className={styles.navLink}>Lessons</Link>
