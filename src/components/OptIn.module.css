@@ -100,5 +100,6 @@
 
 @media (max-width: 520px) {
   .form { flex-direction: column; }
+  .form input[type='email'] { flex: 0 0 auto; width: 100%; }
   .form button[type='submit'] { width: 100%; text-align: center; padding: 1em; }
 }
