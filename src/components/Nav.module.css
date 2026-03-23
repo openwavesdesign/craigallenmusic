@@ -1,10 +1,13 @@
 .nav {
   padding: 1.25rem 0;
   border-bottom: 1px solid rgba(184, 154, 90, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
 }
 
-.nav .container--wide,
-.nav > div {
+.inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,9 +20,17 @@
   text-transform: uppercase;
   color: var(--gold);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-.ytLink {
+/* ── Desktop links ───────────────────────────────────────── */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.link {
   font-family: var(--mono);
   font-size: 0.7rem;
   letter-spacing: 0.1em;
@@ -28,8 +39,84 @@
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.2s, border-color 0.2s;
+  padding-bottom: 2px;
+}
+.link:hover { color: var(--off-white); }
+.linkActive {
+  color: var(--off-white);
+  border-bottom-color: var(--gold-dim);
+}
+
+.ytLink {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 .ytLink:hover {
   color: var(--off-white);
   border-color: var(--gold-dim);
+}
+
+/* ── Hamburger button ────────────────────────────────────── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--off-white);
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+.bar1Open { transform: translateY(7px) rotate(45deg); }
+.bar2Open { opacity: 0; transform: scaleX(0); }
+.bar3Open { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile drawer ───────────────────────────────────────── */
+.drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.drawerOpen {
+  max-height: 360px;
+  border-top: 1px solid rgba(184, 154, 90, 0.1);
+}
+
+.drawerLink {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(184, 154, 90, 0.08);
+  transition: color 0.2s;
+}
+.drawerLink:hover,
+.drawerLink.active { color: var(--off-white); }
+.drawerLink:last-child { border-bottom: none; }
+
+/* ── Mobile breakpoint ───────────────────────────────────── */
+@media (max-width: 680px) {
+  .links { display: none; }
+  .burger { display: flex; }
 }

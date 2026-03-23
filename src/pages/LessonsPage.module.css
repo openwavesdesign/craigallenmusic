@@ -1,0 +1,305 @@
+.header {
+  padding: 4.5rem 0 3rem;
+}
+
+.h1 {
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--off-white);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.h2 {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: var(--off-white);
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  font-family: var(--body-font);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--paper-mid);
+  max-width: 48ch;
+}
+
+.imageSection {
+  padding: 0 0 3rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+  border-top: 1px solid rgba(184, 154, 90, 0.12);
+}
+
+/* ── Benefits grid ───────────────────────────────────────── */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.benefitCard {
+  padding: 1.5rem;
+  background: var(--ink-soft);
+  border: 1px solid rgba(184, 154, 90, 0.1);
+  border-radius: 2px;
+}
+
+.benefitHeading {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.benefitBody {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  line-height: 1.7;
+}
+
+/* ── Details layout ──────────────────────────────────────── */
+.detailsLayout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.detailIcon {
+  color: var(--gold);
+  font-size: 0.5rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.detailItem strong {
+  display: block;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: var(--off-white);
+  margin-bottom: 0.25rem;
+}
+
+.detailItem p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  line-height: 1.7;
+}
+
+.detailsImage {
+  position: sticky;
+  top: 5rem;
+}
+
+/* ── Pricing ─────────────────────────────────────────────── */
+.pricingNote {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  margin-bottom: 1.75rem;
+  max-width: 56ch;
+}
+
+.pricingTable {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(184, 154, 90, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.pricingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid rgba(184, 154, 90, 0.1);
+  gap: 1rem;
+}
+.pricingRow:last-child { border-bottom: none; }
+
+.pricingRowHighlight {
+  background: rgba(184, 154, 90, 0.07);
+}
+
+.pricingLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pricingOption {
+  font-size: 1rem;
+  color: var(--off-white);
+}
+
+.pricingDuration {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.pricingRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  text-align: right;
+}
+
+.pricingPrice {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.pricingRowNote {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 28ch;
+}
+
+.pricingDisclaimer {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* ── Contact form ────────────────────────────────────────── */
+.formIntro {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  margin-bottom: 2rem;
+  max-width: 52ch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fieldLabel {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.input,
+.select,
+.textarea {
+  background: var(--ink-soft);
+  border: 1px solid rgba(184, 154, 90, 0.2);
+  color: var(--off-white);
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border-radius: 2px;
+  width: 100%;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--gold-dim);
+}
+.input:disabled,
+.select:disabled,
+.textarea:disabled { opacity: 0.5; }
+
+.select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a6e5f' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.textarea { resize: vertical; }
+
+.successBox {
+  padding: 2rem;
+  background: rgba(184, 154, 90, 0.08);
+  border: 1px solid rgba(184, 154, 90, 0.25);
+  border-radius: 2px;
+}
+
+.successText {
+  font-size: 1rem;
+  color: var(--off-white);
+}
+
+.errorText {
+  font-size: 0.85rem;
+  color: #c87b7b;
+}
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .header { padding: 3rem 0 2rem; }
+  .section { padding: 2.5rem 0; }
+  .imageSection { padding-bottom: 2rem; }
+  .benefitsGrid { grid-template-columns: 1fr; gap: 1rem; }
+  .detailsLayout { grid-template-columns: 1fr; }
+  .detailsImage { display: none; }
+  .row2 { grid-template-columns: 1fr; }
+  .pricingRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .pricingRight { align-items: flex-start; text-align: left; }
+}
+
+@media (max-width: 900px) and (min-width: 681px) {
+  .benefitsGrid { grid-template-columns: repeat(2, 1fr); }
+  .detailsLayout { grid-template-columns: 1fr; }
+  .detailsImage { display: none; }
+}

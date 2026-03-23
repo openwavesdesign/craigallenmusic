@@ -9,4 +9,17 @@
   color: var(--paper-mid);
   max-width: 54ch;
   line-height: 1.75;
+  margin-bottom: 1.25rem;
 }
+
+.more {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.more:hover { border-color: var(--gold-dim); }

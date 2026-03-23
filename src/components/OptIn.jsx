@@ -41,8 +41,8 @@ export default function OptIn() {
           Get the Free Home Studio<br />Starter Guide
         </h2>
         <p className={styles.sub}>
-          A practical PDF on recording decent music at home &mdash; no gear porn,
-          just real-world advice from a working musician.
+          A practical PDF on recording decent music at home &mdash; real-world
+          advice, no fluff, from a working musician.
         </p>
 
         {status === 'success' ? (
