@@ -116,7 +116,7 @@ export default function ProductionPage() {
           <span className="label">Services</span>
           <h1 className={styles.h1}>Production</h1>
           <p className={styles.sub}>
-            Recording, mixing, and mastering from a home studio built for sound.
+            Recording, mixing, and mastering from a home studio in Montgomery County, PA.
           </p>
         </div>
       </section>

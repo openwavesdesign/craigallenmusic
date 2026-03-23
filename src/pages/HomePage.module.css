@@ -1,0 +1,87 @@
+/* ── Services hub ────────────────────────────────────────── */
+.services {
+  padding: 4rem 0;
+  border-top: 1px solid rgba(184, 154, 90, 0.12);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.serviceCard {
+  padding: 2rem;
+  background: var(--ink-soft);
+  border: 1px solid rgba(184, 154, 90, 0.12);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.serviceIcon {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.serviceHeading {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--off-white);
+  letter-spacing: -0.01em;
+}
+
+.serviceBody {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  line-height: 1.75;
+}
+
+.servicePoints {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.25rem;
+}
+
+.servicePoints li {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding-left: 1em;
+  position: relative;
+}
+.servicePoints li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold-dim);
+}
+
+.serviceLink {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+.serviceLink:hover { border-color: var(--gold-dim); }
+
+@media (max-width: 640px) {
+  .servicesGrid { grid-template-columns: 1fr; }
+  .services { padding: 2.5rem 0; }
+}

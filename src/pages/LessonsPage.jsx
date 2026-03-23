@@ -74,7 +74,7 @@ export default function LessonsPage() {
           <span className="label">Instruction</span>
           <h1 className={styles.h1}>Guitar Lessons</h1>
           <p className={styles.sub}>
-            In-person or online &mdash; for beginners of all ages, taught at your pace.
+            In-person in Montgomery County, PA or online &mdash; for beginners of all ages, taught at your pace.
           </p>
         </div>
       </section>
