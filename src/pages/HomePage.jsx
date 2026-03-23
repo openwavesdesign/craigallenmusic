@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
-import LatestVideo from '../components/LatestVideo';
 import OptIn from '../components/OptIn';
-import About from '../components/About';
 import FaqSection from '../components/FaqSection';
+import ImagePlaceholder from '../components/ImagePlaceholder';
 import usePageMeta from '../hooks/usePageMeta';
+import { YOUTUBE_CHANNEL_URL } from '../config';
+import { LATEST_VIDEO_ID } from 'virtual:youtube-latest';
 import styles from './HomePage.module.css';
 
 const FAQS = [
@@ -85,6 +86,52 @@ function ServicesHub() {
   );
 }
 
+function VideoAbout() {
+  if (!LATEST_VIDEO_ID) return null;
+
+  return (
+    <section className={styles.videoAbout}>
+      <div className="container--wide">
+        <div className={styles.videoAboutGrid}>
+
+          {/* Video column */}
+          <div className={styles.videoCol}>
+            <span className="label">Latest video</span>
+            <div className={styles.videoWrap}>
+              <iframe
+                src={`https://www.youtube.com/embed/${LATEST_VIDEO_ID}`}
+                title="Craig Allen Music — Latest Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <p className={styles.videoNote}>
+              <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer">
+                Subscribe on YouTube &rarr;
+              </a>
+            </p>
+          </div>
+
+          {/* About column */}
+          <div className={styles.aboutCol}>
+            <span className="label">About</span>
+            {/* CUSTOMIZE: Replace with your own bio (2–3 sentences max) */}
+            <p className={styles.aboutText}>
+              I&rsquo;ve been playing guitar and writing songs my whole life.
+              Based in Montgomery County, PA, I record everything in my basement studio
+              and teach guitar to students of all ages &mdash; in-person and online.
+              This site is where I share what I&rsquo;m learning.
+            </p>
+            <Link to="/about" className={styles.aboutMore}>Full story &rarr;</Link>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   usePageMeta({
     title: 'Craig Allen Music | Guitar Lessons & Recording — Montgomery County, PA',
@@ -95,10 +142,9 @@ export default function HomePage() {
     <>
       <Hero />
       <ServicesHub />
-      <LatestVideo />
+      <VideoAbout />
       <OptIn />
       <FaqSection faqs={FAQS} />
-      <About />
     </>
   );
 }

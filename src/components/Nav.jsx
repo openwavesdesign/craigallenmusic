@@ -12,7 +12,7 @@ export default function Nav() {
   const close = () => setOpen(false);
 
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} aria-label="Main navigation">
       <div className={`container--wide ${styles.inner}`}>
         <Link to="/" className={styles.name} onClick={close}>
           Craig Allen Music

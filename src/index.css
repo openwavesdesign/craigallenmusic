@@ -16,6 +16,26 @@
 
 html { scroll-behavior: smooth; }
 
+/* ── Skip-to-content link (accessibility) ─────────────────────── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  z-index: 9999;
+  padding: 0.6em 1.2em;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.skip-link:focus {
+  left: 1rem;
+}
+
 body {
   background-color: var(--ink);
   color: var(--off-white);
@@ -32,12 +52,12 @@ body {
 
 /* ── Shared utilities ─────────────────────────────────────────── */
 .container {
-  width: min(680px, 92%);
+  width: min(860px, 92%);
   margin-inline: auto;
 }
 
 .container--wide {
-  width: min(860px, 92%);
+  width: min(1100px, 92%);
   margin-inline: auto;
 }
 

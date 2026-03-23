@@ -81,7 +81,84 @@
 }
 .serviceLink:hover { border-color: var(--gold-dim); }
 
+/* ── Video + About combined ──────────────────────────────── */
+.videoAbout {
+  padding: 4rem 0;
+  border-top: 1px solid rgba(184, 154, 90, 0.12);
+}
+
+.videoAboutGrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.videoCol {}
+
+.videoWrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: var(--ink-soft);
+  margin-bottom: 1rem;
+}
+
+.videoWrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.videoNote {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+.videoNote a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-dim);
+  transition: color 0.2s;
+}
+.videoNote a:hover { color: var(--off-white); }
+
+.aboutCol {
+  padding-top: 0.25rem;
+}
+
+.aboutText {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--paper-mid);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.aboutMore {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.aboutMore:hover { border-color: var(--gold-dim); }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 760px) {
+  .videoAboutGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   .servicesGrid { grid-template-columns: 1fr; }
   .services { padding: 2.5rem 0; }
+  .videoAbout { padding: 2.5rem 0; }
 }

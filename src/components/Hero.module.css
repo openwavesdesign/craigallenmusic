@@ -22,6 +22,16 @@
 .inner {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .eyebrow {
@@ -81,6 +91,23 @@
   border-color: var(--gold-dim);
 }
 
+.imageCol {
+  width: 100%;
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+}
+.imageCol > * { flex: 1; }
+
+@media (max-width: 760px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .imageCol { max-width: 320px; }
+}
+
 @media (max-width: 480px) {
   .ctas { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .hero { padding: 3.5rem 0 3rem; }
 }

@@ -28,7 +28,7 @@ const FAQS = [
   },
   {
     q: 'What styles of music do you teach?',
-    a: 'Rock, folk, blues, country, pop, fingerstyle, and more. Lessons are built around your musical interests — if you have specific songs or artists you want to learn, we\'ll work from those.',
+    a: 'Rock, folk, blues, pop, fingerstyle, and more. Lessons are built around your musical interests — if you have specific songs or artists you want to learn, we\'ll work from those.',
   },
   {
     q: 'Do you offer a trial lesson?',
@@ -176,7 +176,7 @@ export default function LessonsPage() {
                 <span className={styles.detailIcon}>●</span>
                 <div>
                   <strong>Play the music you love</strong>
-                  <p>Rock, folk, blues, country, pop, fingerstyle &mdash; we build around your interests and goals, not a fixed curriculum.</p>
+                  <p>Rock, folk, blues, pop, fingerstyle &mdash; we build around your interests and goals, not a fixed curriculum.</p>
                 </div>
               </div>
               <div className={styles.detailItem}>
