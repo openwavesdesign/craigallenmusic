@@ -94,9 +94,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <OptIn />
       <ServicesHub />
       <LatestVideo />
-      <OptIn />
       <FaqSection faqs={FAQS} />
       <About />
     </>
