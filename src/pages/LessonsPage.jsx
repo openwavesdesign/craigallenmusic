@@ -1,8 +1,44 @@
 import { useState } from 'react';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import FaqSection from '../components/FaqSection';
 import usePageMeta from '../hooks/usePageMeta';
 import styles from './LessonsPage.module.css';
 import { CONTACT_FORM_URL } from '../config';
+
+const FAQS = [
+  {
+    q: 'Do I need to own a guitar before starting lessons?',
+    a: 'Not necessarily — if you\'re just starting out, we can discuss what kind of guitar would suit you best before your first lesson. You\'ll need something to practice on at home, but it doesn\'t need to be expensive. I\'m happy to make recommendations.',
+  },
+  {
+    q: 'What ages do you teach?',
+    a: 'All ages are welcome. I teach kids (typically 6 and up), teens, adults, and seniors. It\'s genuinely never too early or too late to start learning guitar.',
+  },
+  {
+    q: 'How do online lessons work?',
+    a: 'Online lessons are held over video call — Zoom, FaceTime, or Google Meet, whichever works for you. The format is very similar to in-person: I demonstrate, you play, and I give feedback in real time. A decent internet connection and a device with a working camera is all you need.',
+  },
+  {
+    q: 'How often should I take lessons and how much should I practice?',
+    a: 'Once a week is the standard for steady progress. As for practice, even 15–20 minutes a day makes a real difference — consistency matters far more than occasional long sessions.',
+  },
+  {
+    q: 'How long until I can play a real song?',
+    a: 'Most beginners can play a recognizable song within the first few lessons. Simple chord-based songs are very achievable early on. The exact timeline depends on the song you want to learn and how much you practice between sessions.',
+  },
+  {
+    q: 'What styles of music do you teach?',
+    a: 'Rock, folk, blues, country, pop, fingerstyle, and more. Lessons are built around your musical interests — if you have specific songs or artists you want to learn, we\'ll work from those.',
+  },
+  {
+    q: 'Do you offer a trial lesson?',
+    a: 'Yes — I offer a 30-minute intro lesson for $35 so we can meet, talk about your goals, and get a feel for working together before committing to regular sessions.',
+  },
+  {
+    q: 'Is there a contract or minimum commitment?',
+    a: 'No contracts. Monthly packages are available for a small discount, but you\'re not locked into anything. If your schedule changes, just let me know.',
+  },
+];
 
 const BENEFITS = [
   {
@@ -195,6 +231,8 @@ export default function LessonsPage() {
           </p>
         </div>
       </section>
+
+      <FaqSection faqs={FAQS} />
 
       {/* ── Contact form ────────────────────────────────────────── */}
       <section className={styles.section} id="contact">

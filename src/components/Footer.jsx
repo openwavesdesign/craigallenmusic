@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { YOUTUBE_CHANNEL_URL } from '../config';
+import { YOUTUBE_CHANNEL_URL, INSTAGRAM_URL } from '../config';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -11,18 +11,33 @@ export default function Footer() {
           <Link to="/about" className={styles.navLink}>About</Link>
           <Link to="/lessons" className={styles.navLink}>Lessons</Link>
           <Link to="/production" className={styles.navLink}>Production</Link>
-          <a
-            href={YOUTUBE_CHANNEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ytLink}
-          >
-            YouTube &rarr;
-          </a>
+          <Link to="/contact" className={styles.navLink}>Contact</Link>
         </nav>
-        <span className={styles.copy}>
-          &copy; {new Date().getFullYear()} Craig Allen Music
-        </span>
+        <div className={styles.right}>
+          <div className={styles.socials}>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Instagram"
+            >
+              Instagram &rarr;
+            </a>
+            <a
+              href={YOUTUBE_CHANNEL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="YouTube"
+            >
+              YouTube &rarr;
+            </a>
+          </div>
+          <span className={styles.copy}>
+            &copy; {new Date().getFullYear()} Craig Allen Music
+          </span>
+        </div>
       </div>
     </footer>
   );

@@ -1,8 +1,40 @@
 import { useState } from 'react';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import FaqSection from '../components/FaqSection';
 import usePageMeta from '../hooks/usePageMeta';
 import styles from './ProductionPage.module.css';
 import { CONTACT_FORM_URL } from '../config';
+
+const FAQS = [
+  {
+    q: 'Do I need to come to your studio to record?',
+    a: 'For recording sessions, yes — you\'ll come to my studio in Montgomery County, PA. For mixing and mastering, everything is handled remotely; you send your files digitally and we work from there.',
+  },
+  {
+    q: 'What file formats do you accept and deliver?',
+    a: 'For mixing, I accept WAV, AIFF, or FLAC stem files exported from your DAW. I deliver 24-bit WAV masters plus MP3s at 320kbps. For mastering, send your stereo mix as a 24-bit WAV with at least 3–6dB of headroom.',
+  },
+  {
+    q: 'How many revisions are included?',
+    a: 'Both mixing and mastering include 2 rounds of revisions. Additional revisions beyond that can be arranged at an hourly rate.',
+  },
+  {
+    q: 'How long does the process take?',
+    a: 'Turnaround depends on the project scope and current schedule. A single mix typically takes 2–5 business days; mastering is usually 1–2 days. Reach out with your project details and I can give a more accurate timeline.',
+  },
+  {
+    q: 'Do you work with all genres?',
+    a: 'Mostly yes — I\'m most at home with guitar-driven music (rock, folk, Americana, country, blues, indie), but I\'m comfortable across a wide range of styles. If you\'re unsure, just describe your project and we can figure it out.',
+  },
+  {
+    q: 'How do I send you my files?',
+    a: 'I use Google Drive, Dropbox, or WeTransfer — whichever works best for you. After your initial inquiry, I\'ll send detailed instructions on how to organize and export your tracks for the cleanest session.',
+  },
+  {
+    q: 'Do you offer discounts for EP or album projects?',
+    a: 'Yes — bundled packages for EPs (3–5 songs) and albums (6+ songs) are available at a discount compared to per-song rates. Get in touch with your project details for an accurate quote.',
+  },
+];
 
 const SERVICES = [
   {
@@ -223,6 +255,8 @@ export default function ProductionPage() {
           </p>
         </div>
       </section>
+
+      <FaqSection faqs={FAQS} />
 
       {/* ── Contact form ────────────────────────────────────────── */}
       <section className={styles.section} id="contact">

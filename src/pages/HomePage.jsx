@@ -3,8 +3,36 @@ import Hero from '../components/Hero';
 import LatestVideo from '../components/LatestVideo';
 import OptIn from '../components/OptIn';
 import About from '../components/About';
+import FaqSection from '../components/FaqSection';
 import usePageMeta from '../hooks/usePageMeta';
 import styles from './HomePage.module.css';
+
+const FAQS = [
+  {
+    q: 'Where are you located?',
+    a: 'I\'m based in Montgomery County, PA — right in the Philadelphia suburbs. I teach guitar in-person locally and online to students anywhere.',
+  },
+  {
+    q: 'Do you offer guitar lessons?',
+    a: 'Yes! I offer guitar lessons for complete beginners of all ages — kids, teens, adults, and seniors. Lessons are available in-person in Montgomery County, PA or online via video call. Standard sessions are 45 minutes, with 30- and 60-minute options available.',
+  },
+  {
+    q: 'What music production services do you offer?',
+    a: 'I offer recording, mixing, and mastering from my home studio in Montgomery County, PA. Rates start at $50/hr for recording, $75/song for mixing, and $40/song for mastering. Single, EP, and album packages are also available.',
+  },
+  {
+    q: 'Do you have any free resources?',
+    a: 'Yes — sign up on this page and I\'ll send you a free Home Studio Starter Guide: practical advice on recording decent music at home without spending a fortune on gear.',
+  },
+  {
+    q: 'How do I get in touch?',
+    a: 'Head to the Contact page and fill out the form — I typically respond within 24 hours. You can also reach me on Instagram @craigallenmusic.',
+  },
+  {
+    q: 'Do you post new content regularly?',
+    a: 'I post new videos to YouTube covering guitar playing, home recording tips, gear, and songwriting. Subscribe to the channel to stay updated.',
+  },
+];
 
 function ServicesHub() {
   return (
@@ -69,6 +97,7 @@ export default function HomePage() {
       <ServicesHub />
       <LatestVideo />
       <OptIn />
+      <FaqSection faqs={FAQS} />
       <About />
     </>
   );

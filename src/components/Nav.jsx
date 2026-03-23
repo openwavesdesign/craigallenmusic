@@ -23,6 +23,7 @@ export default function Nav() {
           <NavLink to="/about" className={navLinkClass}>About</NavLink>
           <NavLink to="/lessons" className={navLinkClass}>Lessons</NavLink>
           <NavLink to="/production" className={navLinkClass}>Production</NavLink>
+          <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
           <a
             href={YOUTUBE_CHANNEL_URL}
             target="_blank"
@@ -51,6 +52,7 @@ export default function Nav() {
           <NavLink to="/about" className={styles.drawerLink} onClick={close}>About</NavLink>
           <NavLink to="/lessons" className={styles.drawerLink} onClick={close}>Lessons</NavLink>
           <NavLink to="/production" className={styles.drawerLink} onClick={close}>Production</NavLink>
+          <NavLink to="/contact" className={styles.drawerLink} onClick={close}>Contact</NavLink>
           <a
             href={YOUTUBE_CHANNEL_URL}
             target="_blank"

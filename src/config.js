@@ -5,6 +5,9 @@
 // Your YouTube channel handle (used for links)
 export const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@CraigAllenMusic';
 
+// Instagram profile
+export const INSTAGRAM_URL = 'https://www.instagram.com/craigallenmusic';
+
 // Your Kit (ConvertKit) form ID
 // Found in Kit: Grow → Landing Pages & Forms → your form → Settings
 export const KIT_FORM_ID = '9235648';

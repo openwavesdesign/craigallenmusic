@@ -1,7 +1,31 @@
 import { Link } from 'react-router-dom';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import FaqSection from '../components/FaqSection';
 import usePageMeta from '../hooks/usePageMeta';
 import styles from './AboutPage.module.css';
+
+const FAQS = [
+  {
+    q: 'How long have you been playing guitar?',
+    a: 'CUSTOMIZE: [e.g., Over 20 years — I picked it up as a kid and never really stopped. Playing, writing, and recording has been a constant throughout my life.]',
+  },
+  {
+    q: 'Do you give guitar lessons?',
+    a: 'Yes — I offer guitar lessons for complete beginners of all ages, in-person in Montgomery County, PA or online. Head to the Lessons page for details on scheduling, pricing, and how to get started.',
+  },
+  {
+    q: 'What kind of music do you make?',
+    a: 'CUSTOMIZE: [e.g., Mostly roots-influenced rock and folk — guitars front and center, songs that mean something. I record everything myself in my basement studio.]',
+  },
+  {
+    q: 'Do you perform live?',
+    a: 'CUSTOMIZE: [e.g., Occasionally — I play locally in the Montgomery County and Philadelphia area. Follow me on Instagram @craigallenmusic for updates on upcoming shows.]',
+  },
+  {
+    q: 'How do I contact you?',
+    a: 'The best way is through the Contact page on this site. You can also reach me on Instagram @craigallenmusic. I typically respond within 24 hours.',
+  },
+];
 
 export default function AboutPage() {
   usePageMeta({
@@ -119,6 +143,8 @@ export default function AboutPage() {
           <ImagePlaceholder label="Studio / workspace photo" aspectRatio="16/7" />
         </div>
       </section>
+
+      <FaqSection faqs={FAQS} />
 
       {/* ── CTA ─────────────────────────────────────────────────── */}
       <section className={styles.cta}>
