@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import usePageMeta from '../hooks/usePageMeta';
 import styles from './AboutPage.module.css';
 
 export default function AboutPage() {
+  usePageMeta({
+    title: 'About Craig Allen | Guitarist & Music Teacher — Montgomery County, PA',
+    description: 'Meet Craig Allen — guitarist, songwriter, home recording enthusiast, and guitar teacher based in Montgomery County, PA. Learn about his musical background, gear, and studio.',
+  });
+
   return (
     <>
       {/* ── Page header ─────────────────────────────────────────── */}

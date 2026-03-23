@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import usePageMeta from '../hooks/usePageMeta';
 import styles from './ProductionPage.module.css';
 import { CONTACT_FORM_URL } from '../config';
 
@@ -81,6 +82,11 @@ const PROJECTS = [
 ];
 
 export default function ProductionPage() {
+  usePageMeta({
+    title: 'Music Production — Recording, Mixing & Mastering | Craig Allen Music',
+    description: 'Professional recording, mixing, and mastering from a home studio in Montgomery County, PA. Recording from $50/hr, mixing from $75/song, mastering from $40/song. EP and album packages available.',
+  });
+
   const [status, setStatus] = useState('idle');
   const [form, setForm] = useState({
     name: '', email: '', phone: '',

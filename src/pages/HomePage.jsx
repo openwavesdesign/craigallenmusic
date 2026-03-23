@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import LatestVideo from '../components/LatestVideo';
 import OptIn from '../components/OptIn';
 import About from '../components/About';
+import usePageMeta from '../hooks/usePageMeta';
 import styles from './HomePage.module.css';
 
 function ServicesHub() {
@@ -57,6 +58,11 @@ function ServicesHub() {
 }
 
 export default function HomePage() {
+  usePageMeta({
+    title: 'Craig Allen Music | Guitar Lessons & Recording — Montgomery County, PA',
+    description: 'Guitar lessons for beginners of all ages — in-person in Montgomery County, PA or online. Also offering recording, mixing, and mastering from a home studio in the Philadelphia suburbs.',
+  });
+
   return (
     <>
       <Hero />

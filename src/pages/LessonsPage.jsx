@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import usePageMeta from '../hooks/usePageMeta';
 import styles from './LessonsPage.module.css';
 import { CONTACT_FORM_URL } from '../config';
 
@@ -38,6 +39,11 @@ const PRICING = [
 ];
 
 export default function LessonsPage() {
+  usePageMeta({
+    title: 'Guitar Lessons in Montgomery County, PA | Craig Allen Music',
+    description: 'Beginner guitar lessons in-person in Montgomery County, PA or online via video call. All ages welcome — kids, teens, adults. Standard 45-minute sessions starting at $35. Flexible scheduling.',
+  });
+
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [form, setForm] = useState({
     name: '', email: '', phone: '',
