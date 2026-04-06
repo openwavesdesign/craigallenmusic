@@ -1,0 +1,485 @@
+/* ── Shared section spacing ───────────────────────────────────── */
+.section {
+  padding: 5rem 0;
+}
+
+/* ── Divider ──────────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(237, 231, 212, 0.08);
+  margin: 0;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  padding: 9rem 0 6rem;
+}
+
+.h1 {
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 7vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--off-white);
+  margin-bottom: 1.5rem;
+}
+
+.h1Em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.heroSub {
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  color: rgba(237, 231, 212, 0.7);
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ── Founding pill ────────────────────────────────────────────── */
+.foundingPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(184, 154, 90, 0.1);
+  border: 1px solid rgba(184, 154, 90, 0.25);
+  border-radius: 99px;
+  padding: 0.5rem 1rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.foundingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* ── Kit form ─────────────────────────────────────────────────── */
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 420px;
+}
+
+.formRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .formRow { flex-direction: column; }
+}
+
+.emailInput {
+  flex: 1;
+  background: rgba(237, 231, 212, 0.06);
+  border: 1.5px solid rgba(237, 231, 212, 0.18);
+  border-radius: 3px;
+  padding: 0.8rem 1rem;
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  color: var(--off-white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.emailInput::placeholder { color: rgba(237, 231, 212, 0.3); }
+.emailInput:focus { border-color: var(--gold); }
+
+.emailInputDark {
+  background: rgba(237, 231, 212, 0.05);
+  border-color: rgba(237, 231, 212, 0.15);
+}
+
+.submitBtn {
+  background: var(--gold);
+  color: var(--ink);
+  border: none;
+  border-radius: 3px;
+  padding: 0.8rem 1.4rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.submitBtn:hover:not(:disabled) { background: var(--gold-dim); filter: brightness(1.1); }
+.submitBtn:active:not(:disabled) { transform: scale(0.97); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.submitBtnDark {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.formNote {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.formNoteDark {
+  color: rgba(237, 231, 212, 0.3);
+}
+
+.errorMsg {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: #c0392b;
+}
+
+.retryBtn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* ── Success state ────────────────────────────────────────────── */
+.successState {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 420px;
+}
+
+.successMsg {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.successMsgDark {
+  color: var(--gold);
+}
+
+.successSub {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* ── About section ────────────────────────────────────────────── */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .aboutGrid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.aboutStatement {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 2.8vw, 1.55rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--off-white);
+  border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.aboutBody {
+  font-size: 0.92rem;
+  color: rgba(237, 231, 212, 0.65);
+  line-height: 1.9;
+}
+
+.aboutBody p + p { margin-top: 1rem; }
+
+/* ── What's inside ────────────────────────────────────────────── */
+.insideGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(237, 231, 212, 0.08);
+  border: 1px solid rgba(237, 231, 212, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .insideGrid { grid-template-columns: 1fr; }
+}
+
+.insideItem {
+  background: rgba(237, 231, 212, 0.03);
+  padding: 1.75rem;
+  transition: background 0.2s;
+}
+
+.insideItem:hover { background: rgba(184, 154, 90, 0.07); }
+
+.insideIcon {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.insideTitle {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--off-white);
+}
+
+.insideDesc {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── Founding offer ───────────────────────────────────────────── */
+.offerSection {
+  background: rgba(184, 154, 90, 0.05);
+  border-top: 1px solid rgba(184, 154, 90, 0.12);
+  border-bottom: 1px solid rgba(184, 154, 90, 0.12);
+  padding: 5rem 0;
+}
+
+.offerLabel {
+  color: rgba(184, 154, 90, 0.6) !important;
+  margin-bottom: 2rem;
+}
+
+.offerLayout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .offerLayout { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.offerPriceBlock {
+  min-width: 180px;
+}
+
+.offerPriceLabel {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.offerPrice {
+  font-family: var(--display);
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--off-white);
+  margin: 0;
+}
+
+.offerPriceSup {
+  font-size: 2rem;
+  font-weight: 400;
+  vertical-align: super;
+  color: var(--gold);
+}
+
+.offerPriceSub {
+  font-size: 1rem;
+  font-weight: 300;
+  vertical-align: baseline;
+  color: rgba(237, 231, 212, 0.4);
+  font-family: var(--body-font);
+}
+
+.offerRegular {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: rgba(237, 231, 212, 0.3);
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+  text-decoration: line-through;
+}
+
+.offerLocked {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(184, 154, 90, 0.1);
+  border: 1px solid rgba(184, 154, 90, 0.25);
+  border-radius: 3px;
+  padding: 0.35rem 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 1rem;
+}
+
+.offerDetailTitle {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+  font-weight: 700;
+  color: var(--off-white);
+  margin-bottom: 0.85rem;
+  line-height: 1.3;
+}
+
+.offerDetailBody {
+  font-size: 0.88rem;
+  color: rgba(237, 231, 212, 0.6);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.offerPerks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.offerPerks li {
+  font-size: 0.88rem;
+  color: rgba(237, 231, 212, 0.8);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.55;
+}
+
+.offerPerks li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  top: 0.15rem;
+}
+
+.offerFormWrap {
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(237, 231, 212, 0.1);
+}
+
+/* ── Who this is for ──────────────────────────────────────────── */
+.forList {
+  list-style: none;
+  padding: 0;
+  border: 1px solid rgba(237, 231, 212, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.forItem {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(237, 231, 212, 0.08);
+  background: rgba(237, 231, 212, 0.02);
+  transition: background 0.15s;
+}
+
+.forItem:last-child { border-bottom: none; }
+.forItem:hover { background: rgba(237, 231, 212, 0.05); }
+
+.forCheck {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(184, 154, 90, 0.1);
+  border: 1.5px solid rgba(184, 154, 90, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  font-size: 0.6rem;
+  color: var(--gold);
+  font-family: var(--mono);
+}
+
+.forText {
+  font-size: 0.9rem;
+  color: rgba(237, 231, 212, 0.65);
+  line-height: 1.65;
+}
+
+.forText strong {
+  color: var(--off-white);
+  font-weight: 500;
+}
+
+/* ── Personal note ────────────────────────────────────────────── */
+.noteSection {
+  background: rgba(184, 154, 90, 0.04);
+  border-top: 1px solid rgba(184, 154, 90, 0.1);
+  border-bottom: 1px solid rgba(184, 154, 90, 0.1);
+  padding: 5rem 0;
+}
+
+.noteLabel {
+  color: rgba(184, 154, 90, 0.5) !important;
+}
+
+.noteBody {
+  font-family: var(--display);
+  font-size: clamp(0.95rem, 2.3vw, 1.15rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.9;
+  color: rgba(237, 231, 212, 0.7);
+  max-width: 600px;
+  border: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+}
+
+.noteSig {
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.noteSig::before {
+  content: '\2014';
+  color: var(--gold);
+}
