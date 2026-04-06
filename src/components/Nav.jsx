@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { YOUTUBE_CHANNEL_URL } from '../config';
 import styles from './Nav.module.css';
 
 export default function Nav() {
@@ -25,14 +24,6 @@ export default function Nav() {
           <NavLink to="/production" className={navLinkClass}>Production</NavLink>
           <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
           <NavLink to="/membership" className={navLinkClass}>Membership</NavLink>
-          <
-            href={YOUTUBE_CHANNEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ytLink}
-          >
-            YouTube &rarr;
-          </a>
         </div>
 
         <button
@@ -55,15 +46,6 @@ export default function Nav() {
           <NavLink to="/production" className={styles.drawerLink} onClick={close}>Production</NavLink>
           <NavLink to="/contact" className={styles.drawerLink} onClick={close}>Contact</NavLink>
           <NavLink to="/membership" className={styles.drawerLink} onClick={close}>Membership</NavLink>
-          <
-            href={YOUTUBE_CHANNEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.drawerLink}
-            onClick={close}
-          >
-            YouTube &rarr;
-          </a>
         </div>
       </div>
     </nav>
