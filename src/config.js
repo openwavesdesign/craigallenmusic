@@ -3,7 +3,7 @@
 // ============================================================
 
 // Your YouTube channel handle (used for links)
-export const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@CraigAllenMusic';
+export const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@craigallenmusic';
 
 // Instagram profile
 export const INSTAGRAM_URL = 'https://www.instagram.com/craigallenmusic';
