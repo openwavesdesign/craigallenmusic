@@ -115,6 +115,35 @@
 .drawerLink.active { color: var(--off-white); }
 .drawerLink:last-child { border-bottom: none; }
 
+/* ── Contact button ─────────────────────────────────────── */
+.contactBtn {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  text-decoration: none;
+  padding: 0.45em 1.1em;
+  transition: background 0.2s;
+}
+.contactBtn:hover { background: var(--off-white); }
+
+.drawerContactBtn {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  margin: 0.75rem 0;
+  transition: background 0.2s;
+}
+.drawerContactBtn:hover { background: var(--off-white); }
+
 /* ── Mobile breakpoint ───────────────────────────────────── */
 @media (max-width: 680px) {
   .links { display: none; }

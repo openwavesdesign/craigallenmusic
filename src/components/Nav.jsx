@@ -22,8 +22,8 @@ export default function Nav() {
           <NavLink to="/about" className={navLinkClass}>About</NavLink>
           <NavLink to="/lessons" className={navLinkClass}>Lessons</NavLink>
           <NavLink to="/production" className={navLinkClass}>Production</NavLink>
-          <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
           <NavLink to="/membership" className={navLinkClass}>Membership</NavLink>
+          <NavLink to="/contact" className={styles.contactBtn}>Contact</NavLink>
         </div>
 
         <button
@@ -44,8 +44,8 @@ export default function Nav() {
           <NavLink to="/about" className={styles.drawerLink} onClick={close}>About</NavLink>
           <NavLink to="/lessons" className={styles.drawerLink} onClick={close}>Lessons</NavLink>
           <NavLink to="/production" className={styles.drawerLink} onClick={close}>Production</NavLink>
-          <NavLink to="/contact" className={styles.drawerLink} onClick={close}>Contact</NavLink>
           <NavLink to="/membership" className={styles.drawerLink} onClick={close}>Membership</NavLink>
+          <NavLink to="/contact" className={styles.drawerContactBtn} onClick={close}>Contact</NavLink>
         </div>
       </div>
     </nav>
