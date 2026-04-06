@@ -14,7 +14,7 @@ export const KIT_FORM_ID = '9235648';
 
 // Kit form ID for the Membership waitlist
 // Create a separate form in Kit for the membership waitlist, then paste its ID here.
-export const KIT_MEMBERSHIP_FORM_ID = 'YOUR_MEMBERSHIP_FORM_ID';
+export const KIT_MEMBERSHIP_FORM_ID = '9293849';
 
 // Contact form endpoint
 // Sign up at https://formspree.io, create a form, and paste your form ID below.
