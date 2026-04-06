@@ -25,7 +25,7 @@ export default function Nav() {
           <NavLink to="/production" className={navLinkClass}>Production</NavLink>
           <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
           <NavLink to="/membership" className={navLinkClass}>Membership</NavLink>
-          <
+          <a
             href={YOUTUBE_CHANNEL_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -55,7 +55,7 @@ export default function Nav() {
           <NavLink to="/production" className={styles.drawerLink} onClick={close}>Production</NavLink>
           <NavLink to="/contact" className={styles.drawerLink} onClick={close}>Contact</NavLink>
           <NavLink to="/membership" className={styles.drawerLink} onClick={close}>Membership</NavLink>
-          <
+          <a
             href={YOUTUBE_CHANNEL_URL}
             target="_blank"
             rel="noopener noreferrer"
