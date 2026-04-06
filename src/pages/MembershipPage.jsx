@@ -54,10 +54,10 @@ function KitForm({ id, inputId, buttonLabel, note, dark = false }) {
     return (
       <div className={styles.successState} role="status">
         <p className={`${styles.successMsg} ${dark ? styles.successMsgDark : ''}`}>
-          You&rsquo;re on the list.
+          Check your inbox.
         </p>
         <p className={styles.successSub}>
-          You&rsquo;ll hear from me before this opens to the public.
+          Click the confirmation link in the email to secure your spot.
         </p>
       </div>
     );
