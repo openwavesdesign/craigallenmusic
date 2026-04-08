@@ -20,8 +20,8 @@ export default function Nav() {
         <div className={styles.links}>
           <NavLink to="/" end className={navLinkClass}>Home</NavLink>
           <NavLink to="/about" className={navLinkClass}>About</NavLink>
-          <NavLink to="/lessons" className={navLinkClass}>Lessons</NavLink>
-          <NavLink to="/production" className={navLinkClass}>Production</NavLink>
+          <a href="https://craigallen.bandcamp.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>Music</a>
+          <NavLink to="/services" className={navLinkClass}>Services</NavLink>
           <NavLink to="/membership" className={navLinkClass}>Membership</NavLink>
           <NavLink to="/contact" className={styles.contactBtn}>Contact</NavLink>
         </div>
@@ -42,8 +42,8 @@ export default function Nav() {
         <div className="container--wide">
           <NavLink to="/" end className={styles.drawerLink} onClick={close}>Home</NavLink>
           <NavLink to="/about" className={styles.drawerLink} onClick={close}>About</NavLink>
-          <NavLink to="/lessons" className={styles.drawerLink} onClick={close}>Lessons</NavLink>
-          <NavLink to="/production" className={styles.drawerLink} onClick={close}>Production</NavLink>
+          <a href="https://craigallen.bandcamp.com/" target="_blank" rel="noopener noreferrer" className={styles.drawerLink} onClick={close}>Music</a>
+          <NavLink to="/services" className={styles.drawerLink} onClick={close}>Services</NavLink>
           <NavLink to="/membership" className={styles.drawerLink} onClick={close}>Membership</NavLink>
           <NavLink to="/contact" className={styles.drawerContactBtn} onClick={close}>Contact</NavLink>
         </div>

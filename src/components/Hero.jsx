@@ -13,10 +13,10 @@ export default function Hero() {
             Craig<br /><em>Allen</em>
           </h1>
           <p className={styles.sub}>
-            Guitar lessons for all ages &middot; music production &middot; original songs
+            music for burned out millennials
           </p>
           <div className={styles.ctas}>
-            <Link to="/lessons" className="btn-primary">Guitar Lessons</Link>
+            <Link to="/services" className="btn-primary">Guitar Lessons</Link>
             <a href="#optin" className={styles.ctaSecondary}>Free Studio Guide &darr;</a>
           </div>
         </div>

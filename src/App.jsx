@@ -4,8 +4,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import LessonsPage from './pages/LessonsPage';
-import ProductionPage from './pages/ProductionPage';
+import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import MembershipPage from './pages/MembershipPage';
 
@@ -19,8 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/lessons" element={<LessonsPage />} />
-          <Route path="/production" element={<ProductionPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/membership" element={<MembershipPage />} />
         </Routes>
