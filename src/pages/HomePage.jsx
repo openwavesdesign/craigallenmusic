@@ -43,25 +43,6 @@ function ServicesHub() {
         <div className={styles.servicesGrid}>
 
           <div className={styles.serviceCard}>
-            <span className={styles.serviceIcon}>♩</span>
-            <h2 className={styles.serviceHeading}>Guitar Lessons</h2>
-            <p className={styles.serviceBody}>
-              In-person in Montgomery County, PA or online via video call.
-              Beginners of all ages welcome — kids, teens, adults, seniors.
-              Standard 45-minute sessions with flexible scheduling.
-            </p>
-            <ul className={styles.servicePoints}>
-              <li>Complete beginners always welcome</li>
-              <li>Rock, folk, blues, fingerstyle &amp; more</li>
-              <li>No music reading required</li>
-              <li>Starting at $35</li>
-            </ul>
-            <Link to="/lessons" className={styles.serviceLink}>
-              Lesson info &amp; pricing &rarr;
-            </Link>
-          </div>
-
-          <div className={styles.serviceCard}>
             <span className={styles.serviceIcon}>⏺</span>
             <h2 className={styles.serviceHeading}>Music Production</h2>
             <p className={styles.serviceBody}>
@@ -75,8 +56,46 @@ function ServicesHub() {
               <li>Mastering from $40/song</li>
               <li>Single, EP &amp; album packages</li>
             </ul>
-            <Link to="/production" className={styles.serviceLink}>
+            <Link to="/services" className={styles.serviceLink}>
               Services &amp; rates &rarr;
+            </Link>
+          </div>
+
+          <div className={styles.serviceCard}>
+            <span className={styles.serviceIcon}>♩</span>
+            <h2 className={styles.serviceHeading}>Guitar Lessons</h2>
+            <p className={styles.serviceBody}>
+              In-person in Montgomery County, PA or online via video call.
+              Beginners of all ages welcome — kids, teens, adults, seniors.
+              Standard 45-minute sessions with flexible scheduling.
+            </p>
+            <ul className={styles.servicePoints}>
+              <li>Complete beginners always welcome</li>
+              <li>Rock, folk, blues, fingerstyle &amp; more</li>
+              <li>No music reading required</li>
+              <li>Starting at $35</li>
+            </ul>
+            <Link to="/services" className={styles.serviceLink}>
+              Lesson info &amp; pricing &rarr;
+            </Link>
+          </div>
+
+          <div className={styles.serviceCard}>
+            <span className={styles.serviceIcon}>★</span>
+            <h2 className={styles.serviceHeading}>Membership</h2>
+            <p className={styles.serviceBody}>
+              A community for musicians serious about their craft &mdash; guitar technique,
+              home recording, and songwriting process. Built by someone doing this
+              for 20 years in a basement.
+            </p>
+            <ul className={styles.servicePoints}>
+              <li>Guitar, recording &amp; songwriting lessons</li>
+              <li>Behind-the-scenes on The Rearview EP</li>
+              <li>Private community (small &amp; intentional)</li>
+              <li>Founding rate: $7/month &mdash; locked forever</li>
+            </ul>
+            <Link to="/membership" className={styles.serviceLink}>
+              Join the membership &rarr;
             </Link>
           </div>
 

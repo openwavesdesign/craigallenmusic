@@ -6,7 +6,7 @@
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 0.25rem;
 }
@@ -157,8 +157,11 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .servicesGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
   .services { padding: 2.5rem 0; }
   .videoAbout { padding: 2.5rem 0; }
 }
